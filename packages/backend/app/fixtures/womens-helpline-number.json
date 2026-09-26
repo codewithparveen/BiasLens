@@ -1,0 +1,414 @@
+{
+  "plan": {
+    "queries": [
+      "women's helpline number"
+    ],
+    "cities": [
+      "Bengaluru",
+      "Chennai",
+      "Delhi",
+      "Mumbai",
+      "Kolkata"
+    ],
+    "languages": [
+      "bn",
+      "en",
+      "hi",
+      "mr",
+      "ta"
+    ],
+    "runs_per_variant": 2,
+    "google_domain": "google.co.in",
+    "country": "in",
+    "num_results": 10
+  },
+  "queries": [
+    {
+      "query": "women's helpline number",
+      "variants": [
+        {
+          "variant": {
+            "query": "women's helpline number",
+            "city": "Bengaluru",
+            "language": "en",
+            "google_domain": "google.co.in",
+            "country": "in",
+            "num_results": 10
+          },
+          "label": "Bengaluru/en",
+          "result_count": 5,
+          "domains": [
+            "mohfw.gov.in",
+            "who.int",
+            "hindustantimes.com",
+            "1mg.com",
+            "reddit.com"
+          ],
+          "quality_mix": {
+            "health_medical_authority": {
+              "count": 2,
+              "share": 0.4,
+              "label": "Health / Medical Authority",
+              "weight": 0.9
+            },
+            "established_news": {
+              "count": 1,
+              "share": 0.2,
+              "label": "Established News",
+              "weight": 0.7
+            },
+            "commercial": {
+              "count": 1,
+              "share": 0.2,
+              "label": "Commercial",
+              "weight": 0.4
+            },
+            "forum_ugc": {
+              "count": 1,
+              "share": 0.2,
+              "label": "Forum / User-Generated",
+              "weight": 0.2
+            }
+          },
+          "quality_score": 62.0,
+          "normalized_entropy": 1.0,
+          "language_match_rate": 1.0,
+          "ad_count": 0,
+          "ai_overview_present": true,
+          "is_empty": false,
+          "reliability": {
+            "result_count": {
+              "n": 2,
+              "mean": 5.0,
+              "stdev": 0.0,
+              "coefficient_of_variation": 0.0
+            },
+            "quality_score": {
+              "n": 2,
+              "mean": 62.0,
+              "stdev": 0.0,
+              "coefficient_of_variation": 0.0
+            }
+          },
+          "warnings": []
+        },
+        {
+          "variant": {
+            "query": "women's helpline number",
+            "city": "Chennai",
+            "language": "ta",
+            "google_domain": "google.co.in",
+            "country": "in",
+            "num_results": 10
+          },
+          "label": "Chennai/ta",
+          "result_count": 5,
+          "domains": [
+            "mohfw.gov.in",
+            "ndtv.com",
+            "hindustantimes.com",
+            "quora.com",
+            "reddit.com"
+          ],
+          "quality_mix": {
+            "health_medical_authority": {
+              "count": 1,
+              "share": 0.2,
+              "label": "Health / Medical Authority",
+              "weight": 0.9
+            },
+            "established_news": {
+              "count": 2,
+              "share": 0.4,
+              "label": "Established News",
+              "weight": 0.7
+            },
+            "forum_ugc": {
+              "count": 2,
+              "share": 0.4,
+              "label": "Forum / User-Generated",
+              "weight": 0.2
+            }
+          },
+          "quality_score": 54.0,
+          "normalized_entropy": 1.0,
+          "language_match_rate": 0.6,
+          "ad_count": 0,
+          "ai_overview_present": false,
+          "is_empty": false,
+          "reliability": {
+            "result_count": {
+              "n": 2,
+              "mean": 5.0,
+              "stdev": 0.0,
+              "coefficient_of_variation": 0.0
+            },
+            "quality_score": {
+              "n": 2,
+              "mean": 54.0,
+              "stdev": 0.0,
+              "coefficient_of_variation": 0.0
+            }
+          },
+          "warnings": []
+        },
+        {
+          "variant": {
+            "query": "women's helpline number",
+            "city": "Delhi",
+            "language": "hi",
+            "google_domain": "google.co.in",
+            "country": "in",
+            "num_results": 10
+          },
+          "label": "Delhi/hi",
+          "result_count": 5,
+          "domains": [
+            "thehindu.com",
+            "ndtv.com",
+            "hindustantimes.com",
+            "quora.com",
+            "reddit.com"
+          ],
+          "quality_mix": {
+            "established_news": {
+              "count": 3,
+              "share": 0.6,
+              "label": "Established News",
+              "weight": 0.7
+            },
+            "forum_ugc": {
+              "count": 2,
+              "share": 0.4,
+              "label": "Forum / User-Generated",
+              "weight": 0.2
+            }
+          },
+          "quality_score": 50.0,
+          "normalized_entropy": 1.0,
+          "language_match_rate": 0.8,
+          "ad_count": 1,
+          "ai_overview_present": false,
+          "is_empty": false,
+          "reliability": {
+            "result_count": {
+              "n": 2,
+              "mean": 5.0,
+              "stdev": 0.0,
+              "coefficient_of_variation": 0.0
+            },
+            "quality_score": {
+              "n": 2,
+              "mean": 50.0,
+              "stdev": 0.0,
+              "coefficient_of_variation": 0.0
+            }
+          },
+          "warnings": []
+        },
+        {
+          "variant": {
+            "query": "women's helpline number",
+            "city": "Mumbai",
+            "language": "mr",
+            "google_domain": "google.co.in",
+            "country": "in",
+            "num_results": 10
+          },
+          "label": "Mumbai/mr",
+          "result_count": 5,
+          "domains": [
+            "thehindu.com",
+            "facebook.com",
+            "youtube.com",
+            "quora.com",
+            "localnews-demo.example"
+          ],
+          "quality_mix": {
+            "established_news": {
+              "count": 1,
+              "share": 0.2,
+              "label": "Established News",
+              "weight": 0.7
+            },
+            "forum_ugc": {
+              "count": 3,
+              "share": 0.6,
+              "label": "Forum / User-Generated",
+              "weight": 0.2
+            },
+            "unclassified": {
+              "count": 1,
+              "share": 0.2,
+              "label": "Unclassified",
+              "weight": 0.5
+            }
+          },
+          "quality_score": 36.0,
+          "normalized_entropy": 1.0,
+          "language_match_rate": 0.4,
+          "ad_count": 1,
+          "ai_overview_present": false,
+          "is_empty": false,
+          "reliability": {
+            "result_count": {
+              "n": 2,
+              "mean": 5.0,
+              "stdev": 0.0,
+              "coefficient_of_variation": 0.0
+            },
+            "quality_score": {
+              "n": 2,
+              "mean": 36.0,
+              "stdev": 0.0,
+              "coefficient_of_variation": 0.0
+            }
+          },
+          "warnings": []
+        },
+        {
+          "variant": {
+            "query": "women's helpline number",
+            "city": "Kolkata",
+            "language": "bn",
+            "google_domain": "google.co.in",
+            "country": "in",
+            "num_results": 10
+          },
+          "label": "Kolkata/bn",
+          "result_count": 5,
+          "domains": [
+            "reddit.com",
+            "facebook.com",
+            "hindustantimes.com",
+            "infoblog-demo.example",
+            "reddit.com"
+          ],
+          "quality_mix": {
+            "forum_ugc": {
+              "count": 3,
+              "share": 0.6,
+              "label": "Forum / User-Generated",
+              "weight": 0.2
+            },
+            "established_news": {
+              "count": 1,
+              "share": 0.2,
+              "label": "Established News",
+              "weight": 0.7
+            },
+            "unclassified": {
+              "count": 1,
+              "share": 0.2,
+              "label": "Unclassified",
+              "weight": 0.5
+            }
+          },
+          "quality_score": 36.0,
+          "normalized_entropy": 0.9609640474436811,
+          "language_match_rate": 0.4,
+          "ad_count": 1,
+          "ai_overview_present": false,
+          "is_empty": false,
+          "reliability": {
+            "result_count": {
+              "n": 2,
+              "mean": 5.0,
+              "stdev": 0.0,
+              "coefficient_of_variation": 0.0
+            },
+            "quality_score": {
+              "n": 2,
+              "mean": 36.0,
+              "stdev": 0.0,
+              "coefficient_of_variation": 0.0
+            }
+          },
+          "warnings": []
+        }
+      ],
+      "pairwise": [
+        {
+          "variant_a": "Bengaluru/en",
+          "variant_b": "Chennai/ta",
+          "jaccard": 0.42857142857142855,
+          "rbo": 0.62911
+        },
+        {
+          "variant_a": "Bengaluru/en",
+          "variant_b": "Delhi/hi",
+          "jaccard": 0.25,
+          "rbo": 0.307665
+        },
+        {
+          "variant_a": "Bengaluru/en",
+          "variant_b": "Mumbai/mr",
+          "jaccard": 0.0,
+          "rbo": 0.0
+        },
+        {
+          "variant_a": "Bengaluru/en",
+          "variant_b": "Kolkata/bn",
+          "jaccard": 0.2857142857142857,
+          "rbo": 0.307665
+        },
+        {
+          "variant_a": "Chennai/ta",
+          "variant_b": "Delhi/hi",
+          "jaccard": 0.6666666666666666,
+          "rbo": 0.678555
+        },
+        {
+          "variant_a": "Chennai/ta",
+          "variant_b": "Mumbai/mr",
+          "jaccard": 0.1111111111111111,
+          "rbo": 0.14944500000000002
+        },
+        {
+          "variant_a": "Chennai/ta",
+          "variant_b": "Kolkata/bn",
+          "jaccard": 0.2857142857142857,
+          "rbo": 0.307665
+        },
+        {
+          "variant_a": "Delhi/hi",
+          "variant_b": "Mumbai/mr",
+          "jaccard": 0.25,
+          "rbo": 0.47089000000000003
+        },
+        {
+          "variant_a": "Delhi/hi",
+          "variant_b": "Kolkata/bn",
+          "jaccard": 0.2857142857142857,
+          "rbo": 0.307665
+        },
+        {
+          "variant_a": "Mumbai/mr",
+          "variant_b": "Kolkata/bn",
+          "jaccard": 0.125,
+          "rbo": 0.221445
+        }
+      ],
+      "inequality_score": 47.27,
+      "score_breakdown": {
+        "overlap": 0.662,
+        "quality": 0.26,
+        "language": 0.6,
+        "diversity": 0.039
+      },
+      "score_weights": {
+        "overlap": 0.4,
+        "quality": 0.2,
+        "language": 0.25,
+        "diversity": 0.15
+      }
+    }
+  ],
+  "generated_at": "2026-09-20T17:24:14.065719Z",
+  "credits_used": 10,
+  "cache_hits": 0,
+  "is_demo_data": true,
+  "warnings": [
+    "SYNTHETIC DEMO DATA: domains and snippets are fabricated placeholders, not real SerpApi results. Every metric is computed by the real, tested biaslens.metrics engine on that synthetic input. Cities are paired with one representative language each here, not a full cross product."
+  ]
+}

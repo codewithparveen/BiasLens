@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/*
+  BiasLens design tokens.
+
+  Direction: editorial data-journalism, not another purple-gradient SaaS
+  dashboard. Ink + warm paper neutrals, a deliberate two-font pairing (a
+  serif display face for headlines against a clean grotesque for UI/body),
+  and a single confident accent: a deep Prussian/data-ledger blue -- the
+  color of an official report's ink, not a decorative gradient. (Warm
+  cream + terracotta + serif is the single most common AI-generated
+  palette right now, so that combination was deliberately avoided here.)
+  Fonts ship with real fallback stacks so nothing breaks if the Google
+  Fonts link is stripped in a locked-down environment.
+*/
+
+@theme {
+  --font-display: "Fraunces", "Georgia", "Iowan Old Style", serif;
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Ink / paper neutrals */
+  --color-ink-950: #14110f;
+  --color-ink-900: #1e1a17;
+  --color-ink-800: #2d2723;
+  --color-ink-700: #453b34;
+  --color-ink-600: #5f5148;
+  --color-ink-500: #7a695d;
+  --color-ink-400: #9c8c7f;
+  --color-ink-300: #c2b6ab;
+  --color-ink-200: #ded5cb;
+  --color-ink-100: #f0e9e1;
+  --color-ink-50: #faf6f1;
+
+  /* Accent: Prussian / data-ledger blue */
+  --color-accent-900: #0c2440;
+  --color-accent-700: #123963;
+  --color-accent-600: #17497f;
+  --color-accent-500: #1e5c9c;
+  --color-accent-400: #3f7cb8;
+  --color-accent-300: #7aa7d1;
+  --color-accent-100: #dbe7f2;
+
+  /* Signal colors (inequality score bands, quality tiers) */
+  --color-signal-low: #3f7d5c;    /* low inequality / high quality: green */
+  --color-signal-mid: #c08a1e;    /* medium: amber */
+  --color-signal-high: #b33d2e;   /* high inequality / low quality: red */
+
+  --radius-card: 0.75rem;
+}
+
+/*
+  Signal text tokens: the raw --color-signal-* values above are tuned to
+  read well as fills/tints (badges, map bands, chart bars), but several
+  fail WCAG AA (4.5:1) when used directly as text -- mid fails on light
+  backgrounds, and all three fail on dark backgrounds. These theme-scoped
+  variants are for text/icon foreground use specifically; the raw
+  --color-signal-* tokens stay as-is for non-text fills.
+*/
+
+/* Light mode (default) */
+:root {
+  --bg: var(--color-ink-50);
+  --bg-elevated: #ffffff;
+  --fg: var(--color-ink-900);
+  --fg-muted: var(--color-ink-600);
+  --border: var(--color-ink-200);
+  --accent: var(--color-accent-600);
+  --accent-fg: #ffffff;
+  --signal-low-text: #357057;
+  --signal-mid-text: #96650f;
+  --signal-high-text: #b33d2e;
+  color-scheme: light;
+}
+
+/* Dark mode */
+:root[data-theme="dark"] {
+  --bg: var(--color-ink-950);
+  --bg-elevated: var(--color-ink-900);
+  --fg: var(--color-ink-50);
+  --fg-muted: var(--color-ink-300);
+  --border: var(--color-ink-700);
+  --accent: var(--color-accent-400);
+  --accent-fg: var(--color-ink-950);
+  --signal-low-text: #4f9c72;
+  --signal-mid-text: #d9a53f;
+  --signal-high-text: #e27a63;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: var(--color-ink-950);
+    --bg-elevated: var(--color-ink-900);
+    --fg: var(--color-ink-50);
+    --fg-muted: var(--color-ink-300);
+    --border: var(--color-ink-700);
+    --accent: var(--color-accent-400);
+    --accent-fg: var(--color-ink-950);
+    --signal-low-text: #4f9c72;
+    --signal-mid-text: #d9a53f;
+    --signal-high-text: #e27a63;
+    color-scheme: dark;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+::selection {
+  background-color: var(--color-accent-300);
+  color: var(--color-ink-950);
+}

@@ -1,0 +1,119 @@
+# Domain quality tiers for BiasLens.
+#
+# Every domain seen in a search result is classified into exactly one tier
+# below by suffix match. This file is the ONLY source of truth for domain
+# quality -- classification is a plain lookup, never an LLM guess, so it is
+# fully auditable and anyone can propose a PR to fix a miscategorized site.
+#
+# Matching rule (see biaslens/metrics/quality.py):
+#   - a pattern starting with "." matches any domain ending in that suffix
+#     (e.g. ".gov.in" matches "mohfw.gov.in")
+#   - a pattern with no leading "." must match the domain exactly
+# A domain matching no pattern falls into the "unclassified" tier.
+
+tiers:
+  government_official:
+    weight: 1.0
+    label: "Government / Official"
+    domains:
+      - ".gov.in"
+      - ".nic.in"
+      - "india.gov.in"
+      - "mygov.in"
+      - "rbi.org.in"
+      - "sebi.gov.in"
+      - "uidai.gov.in"
+      - "incometax.gov.in"
+      - "pmkisan.gov.in"
+
+  health_medical_authority:
+    weight: 0.9
+    label: "Health / Medical Authority"
+    domains:
+      - "who.int"
+      - "nhp.gov.in"
+      - "mohfw.gov.in"
+      - "icmr.gov.in"
+      - "cdc.gov"
+      - "nih.gov"
+      - "mayoclinic.org"
+      - "clevelandclinic.org"
+      - "nhs.uk"
+      - "aiims.edu"
+
+  academic:
+    weight: 0.9
+    label: "Academic / Research"
+    domains:
+      - ".ac.in"
+      - ".edu"
+      - "researchgate.net"
+      - "ncbi.nlm.nih.gov"
+      - "jstor.org"
+      - "springer.com"
+      - "sciencedirect.com"
+
+  established_news:
+    weight: 0.7
+    label: "Established News"
+    domains:
+      - "thehindu.com"
+      - "indianexpress.com"
+      - "hindustantimes.com"
+      - "timesofindia.indiatimes.com"
+      - "ndtv.com"
+      - "livemint.com"
+      - "business-standard.com"
+      - "theprint.in"
+      - "bbc.com"
+      - "reuters.com"
+      - "pib.gov.in"
+
+  consumer_health_media:
+    weight: 0.55
+    label: "Consumer Health Media"
+    domains:
+      - "healthline.com"
+      - "webmd.com"
+      - "medicalnewstoday.com"
+
+  commercial:
+    weight: 0.4
+    label: "Commercial"
+    domains:
+      - "amazon.in"
+      - "flipkart.com"
+      - "practo.com"
+      - "1mg.com"
+      - "policybazaar.com"
+      - "bankbazaar.com"
+      - "paisabazaar.com"
+      - "netmeds.com"
+      - "pharmeasy.in"
+
+  forum_ugc:
+    weight: 0.2
+    label: "Forum / User-Generated"
+    domains:
+      - "quora.com"
+      - "reddit.com"
+      - "facebook.com"
+      - "youtube.com"
+      - "youtu.be"
+      - "instagram.com"
+      - "pinterest.com"
+      - "medium.com"
+
+  # Intentionally starts empty: flagging a real domain as a "content farm"
+  # is a factual claim BiasLens should only make from observed evidence
+  # (e.g. thin/duplicated/AI-spun content seen during an actual audit run),
+  # not a guess. Populate this from what your own audits turn up.
+  low_quality_content_farm:
+    weight: 0.1
+    label: "Low-Quality / Content Farm"
+    domains: []
+
+# Any domain matching nothing above.
+unclassified:
+  weight: 0.5
+  label: "Unclassified"
