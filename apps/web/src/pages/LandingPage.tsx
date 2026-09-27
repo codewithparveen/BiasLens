@@ -255,6 +255,7 @@ function MapSection() {
           queries: [EXAMPLE_QUERIES[0]],
           cities: DEFAULT_CITIES,
           languages: DEFAULT_LANGUAGES,
+          demo: true,
         });
         const job = await api.pollAudit(id, { intervalMs: 300, timeoutMs: 10_000 });
         if (cancelled) return;
@@ -301,7 +302,7 @@ function MapSection() {
               Source quality, city by city
             </p>
             <p className="mt-2 text-sm text-(--fg-muted)">
-              This preview runs "{EXAMPLE_QUERIES[0]}" live against the audit pipeline and colors each
+              This preview uses a saved demo audit for "{EXAMPLE_QUERIES[0]}" and colors each
               city by how trustworthy its top results were -- green for government/health-authority-heavy
               results, red for forum- and commercial-heavy results.
             </p>
