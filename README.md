@@ -1,5 +1,5 @@
 🔍 BiasLens - Search Auditor for India
-[live link- https://bias-lens-ochre.vercel.app/]
+[live link- https://bias-lens-ochre.vercel.app/
 
 Audit how Google search results differ across Indian cities and languages.
 
